@@ -43,4 +43,219 @@ td, th {
   padding: 0;
 }
 
+/*fonts*/
+/*padding*/
+/*colors*/
+html {
+  font-size: 14px;
+  background-color: #181719;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+  color: #FFFFFF;
+}
+
+header {
+  margin-top: 2.4484536082vh;
+  margin-bottom: 4.8969072165vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-family: "Crimson Pro", serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 1.1428571429rem;
+  color: #FFFFFF;
+  padding: 8px;
+  border: 1px solid #FFFFFF;
+}
+header .burger-icon {
+  height: 34px;
+  width: auto;
+}
+header .burger-icon path {
+  fill: #FFFFFF;
+}
+
+nav {
+  z-index: 100;
+  display: none;
+  color: #FFFFFF;
+  background-color: #181719;
+}
+nav.open {
+  display: flex;
+  flex-direction: column;
+  gap: 27.5773195876vh;
+  position: absolute;
+  padding-top: 2.4484536082vh;
+  padding-left: 12px;
+  padding-right: 12px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+nav .close-icon {
+  height: 34px;
+  width: auto;
+  align-self: flex-end;
+}
+nav .close-icon path {
+  fill: #FFFFFF;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.0927835052vh;
+}
+nav ul li {
+  padding-bottom: 8px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+nav ul li.open {
+  border-bottom: 2px solid #FFFFFF;
+  font-weight: 700;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4.7680412371vh;
+  margin-bottom: 18.5567010309vh;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2216494845vh;
+  color: #FFFFFF;
+}
+.description .heading {
+  font-family: "Lora", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5714285714rem;
+  line-height: 3.2857142857rem;
+}
+.description .txt {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2142857143rem;
+  width: 250px;
+}
+.description .btn {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2142857143rem;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.description .btn .btn-icon {
+  height: fit-content;
+  width: auto;
+}
+.description .btn .btn-icon path {
+  fill: #FFFFFF;
+}
+
+.illustration {
+  width: 100%;
+  position: relative;
+}
+.illustration .illustration-picture {
+  width: 100%;
+  height: auto;
+}
+.illustration .illustration-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #181719;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-right: 19px;
+  padding-left: 19px;
+  margin-left: 40px;
+  bottom: 0;
+  gap: 22px;
+  width: 80vw;
+  transform: translateY(60%);
+}
+
+.card-header {
+  padding-top: 13.17px;
+  width: fit-content;
+  display: grid;
+  grid-template-areas: "pic name" "pic role";
+  column-gap: 1rem;
+  align-content: space-between;
+}
+.card-header .picture {
+  grid-area: pic;
+  border-radius: 50%;
+  width: auto;
+  height: 2.6428571429rem;
+}
+.card-header .name {
+  grid-area: name;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8571428571rem;
+  line-height: 1.0714285714rem;
+}
+.card-header .role {
+  grid-area: role;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.7142857143rem;
+  line-height: 0.8571428571rem;
+  align-self: flex-end;
+}
+
+.card-content {
+  font-family: "Lora", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2857142857rem;
+  line-height: 1.6428571429rem;
+  margin-bottom: 1.7857142857rem;
+  width: 15rem;
+}
+
+footer .author {
+  color: #A9A9A9;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.2142857143rem;
+  margin-bottom: 3.0927835052vh;
+}
+footer .author a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+}
+footer .author a:hover {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=style.css.map */

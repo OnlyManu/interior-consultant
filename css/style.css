@@ -51,6 +51,13 @@ html {
   font-style: normal;
   background-color: #181719;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 991px) {
+  body.hide {
+    overflow: hidden;
+  }
 }
 
 .container {
@@ -96,7 +103,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 27.5773195876vh;
-    position: absolute;
+    position: fixed;
     padding-top: 2.4484536082vh;
     padding-left: 3.2vw;
     padding-right: 3.2vw;

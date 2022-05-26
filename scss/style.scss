@@ -19,6 +19,14 @@ html{
     font-style: normal;
     background-color: $color-primary;
     font-family: $font-primary;
+    scroll-behavior: smooth;
+}
+body{
+    @media screen and (max-width: 991px) {
+        &.hide{
+            overflow: hidden;
+        }
+    }
 }
 .container{
     width: 100%;
@@ -62,7 +70,7 @@ nav{
             display: flex;
             flex-direction: column;
             gap: heightInVH(214);
-            position: absolute;
+            position: fixed;
             padding: {
                 top: heightInVH(19);
                 left: $padding-mobile;

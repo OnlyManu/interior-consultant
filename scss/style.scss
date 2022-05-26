@@ -1,5 +1,6 @@
 @import "libs/reset.scss";
 @import "libs/functions.scss";
+@import "libs/mixins.scss";
 
 /*fonts*/
 $font-primary: 'Montserrat', sans-serif;
@@ -7,7 +8,7 @@ $font-secondary: 'Lora', serif;
 $font-logo: 'Crimson Pro', serif;
 /*padding*/
 $padding-desktop: 77px;
-$padding-mobile: 12px;
+$padding-mobile: widthInVW(12, 375);
 /*colors*/
 $color-primary: #181719;
 $color-secondary: #FFFFFF;
@@ -15,6 +16,7 @@ $color-footer: #A9A9A9;
 
 html{
     font-size: 14px;
+    font-style: normal;
     background-color: $color-primary;
     font-family: $font-primary;
 }
@@ -37,10 +39,7 @@ header{
     align-items: center;
     .logo{
         font-family: $font-logo;
-        font-style: normal;
-        font-weight: 200;
-        font-size: fontSizeInRem(14);
-        line-height: fontSizeInRem(16);
+        @include setFontProps(14, 16, 200);
         color: $color-secondary;
         padding: 8px;
         border: 1px solid $color-secondary;
@@ -116,32 +115,22 @@ main{
 
     .heading{
         font-family: $font-secondary;
-        font-style: normal;
-        font-weight: 500;
-        font-size: fontSizeInRem(36);
-        line-height: fontSizeInRem(46);
+        @include setFontProps(36, 46, 500);
     }
     .txt{
-        font-style: normal;
-        font-weight: 400;
-        font-size: fontSizeInRem(14);
-        line-height: fontSizeInRem(17);
+        @include setFontProps(14, 17, 400);
         width: 250px;
     }
     .btn{
         text-decoration: none;
         color: $color-secondary;
-        font-style: normal;
-        font-weight: 700;
-        font-size: fontSizeInRem(14);
-        line-height: fontSizeInRem(17);
+        @include setFontProps(14, 17, 700);
         display: flex;
         gap: 15px;
         align-items: center;
         .btn-icon{
             height: fit-content;
             width: auto;
-
             path{
                 fill: $color-secondary;
             }
@@ -157,6 +146,7 @@ main{
         height: auto;
     }
     .illustration-card{
+        z-index: 50;
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -191,27 +181,18 @@ main{
     }
     .name{
         grid-area: name;
-        font-style: normal;
-        font-weight: 500;
-        font-size: fontSizeInRem(12);
-        line-height: fontSizeInRem(15);
+        @include setFontProps(12, 15, 500);
     }
     .role{
         grid-area: role;
-        font-style: normal;
-        font-weight: 500;
-        font-size: fontSizeInRem(10);
-        line-height: fontSizeInRem(12);
+        @include setFontProps(10, 12, 500);
         align-self: flex-end;
     }
 }
 
 .card-content{
     font-family: $font-secondary;
-    font-style: normal;
-    font-weight: 700;
-    font-size: fontSizeInRem(18);
-    line-height: fontSizeInRem(23);
+    @include setFontProps(18, 23, 700);
     margin-bottom: fontSizeInRem(25);
     width: fontSizeInRem(210);
 }
@@ -220,10 +201,7 @@ footer{
     .author{
         color: $color-footer;
         text-align: center;
-        font-style: normal;
-        font-weight: 500;
-        font-size: fontSizeInRem(14);
-        line-height: fontSizeInRem(17);
+        @include setFontProps(14, 17, 500);
         margin-bottom: heightInVH(24);
         a{
             color: inherit;

@@ -254,7 +254,7 @@ footer .author {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.2142857143rem;
-  margin-bottom: 3.0927835052vh;
+  margin-bottom: 24px;
 }
 footer .author a {
   color: inherit;
@@ -291,7 +291,7 @@ footer .author a:hover {
   }
   nav ul li {
     font-size: 1.2857142857rem;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.5714285714rem;
   }
 
@@ -299,6 +299,7 @@ footer .author a:hover {
     flex-direction: row;
     gap: 9.6527777778vw;
     align-items: center;
+    margin-bottom: 21.8518518519vh;
   }
 
   .description {

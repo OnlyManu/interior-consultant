@@ -7,7 +7,7 @@ $font-primary: 'Montserrat', sans-serif;
 $font-secondary: 'Lora', serif;
 $font-logo: 'Crimson Pro', serif;
 /*padding*/
-$padding-desktop: 77px;
+$padding-desktop: widthInVW(77, 1440);
 $padding-mobile: widthInVW(12, 375);
 /*colors*/
 $color-primary: #181719;
@@ -57,26 +57,27 @@ nav{
     display: none;
     color: $color-secondary;
     background-color: $color-primary;
-    &.open{
-        display: flex;
-        flex-direction: column;
-        gap: heightInVH(214);
-        position: absolute;
-        padding: {
-            top: heightInVH(19);
-            left: $padding-mobile;
-            right: $padding-mobile
-        };
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
+    @media screen and (max-width: 991px) {
+        &.open{
+            display: flex;
+            flex-direction: column;
+            gap: heightInVH(214);
+            position: absolute;
+            padding: {
+                top: heightInVH(19);
+                left: $padding-mobile;
+                right: $padding-mobile
+            };
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+        }
     }
     .close-icon{
         height: 34px;
         width: auto;
         align-self: flex-end;
-
         path{
             fill: $color-secondary;
         }
@@ -94,8 +95,17 @@ nav{
                 color: inherit;
             }
             &.open{
-                border-bottom: 2px solid $color-secondary;
+                position: relative;
                 font-weight: 700;
+            }
+            &.open::after{
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 2px;
+                left: 0;
+                bottom: 0;
+                background-color: $color-secondary;
             }
         }
     }
@@ -156,8 +166,9 @@ main{
             right: 19px;
             left: 19px;
         };
-        margin-left: 40px;
+        margin-right: widthInVW(11);
         bottom: 0;
+        right: 0;
         gap: 22px;
         width: widthInVW(300);
         transform: translateY(60%);
@@ -182,11 +193,12 @@ main{
     .name{
         grid-area: name;
         @include setFontProps(12, 15, 500);
+        align-self: center;
     }
     .role{
         grid-area: role;
         @include setFontProps(10, 12, 500);
-        align-self: flex-end;
+        align-self: center;
     }
 }
 
@@ -211,5 +223,78 @@ footer{
                 text-decoration: underline;
             }
         }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container{
+        padding: {
+            right: $padding-desktop;
+            left: $padding-desktop;
+        }
+    }
+    header{
+        margin: {
+            top: heightInVH(42, 1080);
+            bottom: heightInVH(171, 1080); 
+        };
+        .burger-icon{
+            display: none;
+        }
+    }
+    nav{
+        display: flex;
+        .close-icon{
+            display: none;
+        }
+        ul{
+            flex-direction: row;
+            gap: widthInVW(86, 1440);
+            li{
+                @include setFontProps(18, 22, 700)
+            }
+        }
+    }
+    main{
+        flex-direction: row;
+        gap: widthInVW(139, 1440);
+        align-items: center;
+    }
+    .description{
+        gap: 0;
+        .heading{
+            white-space: nowrap;
+            @include setFontProps(48, 61, 500);
+            margin-bottom: heightInVH(40, 1080);
+        }
+        .txt{
+            width: fontSizeInRem(410);
+            @include setFontProps(24, 29, 400);
+            margin-bottom: heightInVH(48, 1080);
+        }
+        .btn{
+            @include setFontProps(18, 22, 700);
+
+        }
+    }
+    .illustration{
+        .illustration-card{
+            width: widthInVW(410, 1440);
+        }
+    }
+    .card-header{
+        .picture{
+            height: fontSizeInRem(50);
+        }
+        .name{
+            @include setFontProps(14, 17, 500);
+        }
+        .author{
+            @include setFontProps(12, 15, 500);
+        }
+    }
+    .card-content{
+        @include setFontProps(24, 31, 700);
+        width: fontSizeInRem(287);
     }
 }

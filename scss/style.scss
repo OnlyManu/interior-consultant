@@ -240,6 +240,7 @@ footer{
     nav{
         ul{
             li{
+                padding-bottom: 18px;
                 @include setFontProps(28, 22, 500)
             }
         }
@@ -298,6 +299,7 @@ footer{
             flex-direction: row;
             gap: widthInVW(86, 1440);
             li{
+                padding-bottom: 8px;
                 @include setFontProps(18, 22, 500)
             }
         }

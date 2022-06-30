@@ -277,6 +277,7 @@ footer .author a:hover {
 
 @media screen and (min-width: 768px) {
   nav ul li {
+    padding-bottom: 18px;
     font-size: 2rem;
     font-weight: 500;
     line-height: 1.5714285714rem;
@@ -347,6 +348,7 @@ footer .author a:hover {
     gap: 5.9722222222vw;
   }
   nav ul li {
+    padding-bottom: 8px;
     font-size: 1.2857142857rem;
     font-weight: 500;
     line-height: 1.5714285714rem;

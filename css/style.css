@@ -134,6 +134,9 @@ nav ul li a {
   text-decoration: none;
   color: inherit;
 }
+nav ul li:hover {
+  opacity: 0.6;
+}
 nav ul li.open {
   position: relative;
   font-weight: 700;
@@ -172,7 +175,7 @@ main {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.2142857143rem;
-  width: 250px;
+  width: 66.66vw;
 }
 .description .btn {
   text-decoration: none;
@@ -272,6 +275,53 @@ footer .author a:hover {
   text-decoration: underline;
 }
 
+@media screen and (min-width: 768px) {
+  nav ul li {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5714285714rem;
+  }
+
+  main {
+    margin-bottom: 16.6666666667vh;
+  }
+
+  .description .heading {
+    font-size: 3.4285714286rem;
+    font-weight: 500;
+    line-height: 4.3571428571rem;
+  }
+  .description .txt {
+    font-size: 1.7142857143rem;
+    font-weight: 400;
+    line-height: 2.0714285714rem;
+  }
+  .description .btn {
+    font-size: 1.2857142857rem;
+    font-weight: 700;
+    line-height: 1.5714285714rem;
+  }
+
+  .card-header .picture {
+    height: 3.5714285714rem;
+  }
+  .card-header .name {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2142857143rem;
+  }
+  .card-header .author {
+    font-size: 0.8571428571rem;
+    font-weight: 500;
+    line-height: 1.0714285714rem;
+  }
+
+  .card-content {
+    font-size: 1.7142857143rem;
+    font-weight: 700;
+    line-height: 2.2142857143rem;
+  }
+}
 @media screen and (min-width: 992px) {
   .container {
     padding-right: 5.3472222222vw;
@@ -280,7 +330,7 @@ footer .author a:hover {
 
   header {
     margin-top: 3.8888888889vh;
-    margin-bottom: 15.8333333333vh;
+    margin-bottom: 7.4074074074vh;
   }
   header .burger-icon {
     display: none;
@@ -306,7 +356,7 @@ footer .author a:hover {
     flex-direction: row;
     gap: 9.6527777778vw;
     align-items: center;
-    margin-bottom: 21.8518518519vh;
+    margin-bottom: 18.5185185185vh;
   }
 
   .description {
@@ -314,47 +364,16 @@ footer .author a:hover {
   }
   .description .heading {
     white-space: nowrap;
-    font-size: 3.4285714286rem;
-    font-weight: 500;
-    line-height: 4.3571428571rem;
     margin-bottom: 3.7037037037vh;
   }
   .description .txt {
     width: 29.2857142857rem;
-    font-size: 1.7142857143rem;
-    font-weight: 400;
-    line-height: 2.0714285714rem;
     margin-bottom: 4.4444444444vh;
-  }
-  .description .btn {
-    font-size: 1.2857142857rem;
-    font-weight: 700;
-    line-height: 1.5714285714rem;
   }
 
   .illustration .illustration-card {
+    min-width: fit-content;
     width: 28.4722222222vw;
-  }
-
-  .card-header .picture {
-    height: 3.5714285714rem;
-  }
-  .card-header .name {
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.2142857143rem;
-  }
-  .card-header .author {
-    font-size: 0.8571428571rem;
-    font-weight: 500;
-    line-height: 1.0714285714rem;
-  }
-
-  .card-content {
-    font-size: 1.7142857143rem;
-    font-weight: 700;
-    line-height: 2.2142857143rem;
-    width: 20.5rem;
   }
 }
 

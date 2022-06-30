@@ -102,6 +102,9 @@ nav{
                 text-decoration: none;
                 color: inherit;
             }
+            &:hover{
+                opacity: 0.6;
+            }
             &.open{
                 position: relative;
                 font-weight: 700;
@@ -137,7 +140,7 @@ main{
     }
     .txt{
         @include setFontProps(14, 17, 400);
-        width: 250px;
+        width: 66.66vw;
     }
     .btn{
         text-decoration: none;
@@ -233,7 +236,43 @@ footer{
         }
     }
 }
-
+@media screen and (min-width: 768px) {
+    nav{
+        ul{
+            li{
+                @include setFontProps(28, 22, 500)
+            }
+        }
+    }
+    main{
+        margin-bottom: heightInVH(180, 1080);
+    }
+    .description{
+        .heading{
+            @include setFontProps(48, 61, 500);
+        }
+        .txt{
+            @include setFontProps(24, 29, 400);
+        }
+        .btn{
+            @include setFontProps(18, 22, 700);
+        }
+    }
+    .card-header{
+        .picture{
+            height: fontSizeInRem(50);
+        }
+        .name{
+            @include setFontProps(14, 17, 500);
+        }
+        .author{
+            @include setFontProps(12, 15, 500);
+        }
+    }
+    .card-content{
+        @include setFontProps(24, 31, 700);
+    }
+}
 @media screen and (min-width: 992px) {
     .container{
         padding: {
@@ -244,7 +283,7 @@ footer{
     header{
         margin: {
             top: heightInVH(42, 1080);
-            bottom: heightInVH(171, 1080); 
+            bottom: heightInVH(80, 1080); 
         };
         .burger-icon{
             display: none;
@@ -267,43 +306,23 @@ footer{
         flex-direction: row;
         gap: widthInVW(139, 1440);
         align-items: center;
-        margin-bottom: heightInVH(236, 1080);
+        margin-bottom: heightInVH(200, 1080);
     }
     .description{
         gap: 0;
         .heading{
             white-space: nowrap;
-            @include setFontProps(48, 61, 500);
             margin-bottom: heightInVH(40, 1080);
         }
         .txt{
             width: fontSizeInRem(410);
-            @include setFontProps(24, 29, 400);
             margin-bottom: heightInVH(48, 1080);
-        }
-        .btn{
-            @include setFontProps(18, 22, 700);
-
         }
     }
     .illustration{
         .illustration-card{
+            min-width: fit-content;
             width: widthInVW(410, 1440);
         }
-    }
-    .card-header{
-        .picture{
-            height: fontSizeInRem(50);
-        }
-        .name{
-            @include setFontProps(14, 17, 500);
-        }
-        .author{
-            @include setFontProps(12, 15, 500);
-        }
-    }
-    .card-content{
-        @include setFontProps(24, 31, 700);
-        width: fontSizeInRem(287);
     }
 }
